@@ -26,3 +26,9 @@ Ya con la base de datos instalada. Solo nos queda levantar el proyecto laravel y
     - npm run dev
 
 Si se hizo todo correctamente, abrimos el navegador y entramos a la dirección: localhost:8000
+
+## LISTAR UNA TABLA DE BASE DE DATOS EN LARAVEL
+
+Para listar una tabla tenemos dos opciones. La más facil consiste en invocar a la clase DB y llamar a la tabla. Y la otra forma (la correcta pero más compleja) es primero crear un modelo de esa tabla y luego en el controlador, llamar al modelo sin necesidad de la clase DB.
+
+Una vez consumamos la tabla lo guardamos en una variable y lo envíamos a la vista para que con la función "@foreach" podamos listar los registros de aquella tabla.  

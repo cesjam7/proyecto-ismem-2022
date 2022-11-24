@@ -22,7 +22,7 @@
               </tr>
               @foreach ($listado as $cliente)
               <tr>
-                <td>{{ $cliente->contactFirstName }}</td>
+                <td>{{ $cliente->firstName }}</td>
                 <td>Valera</td>
                 <td>85296325</td>
                 <td>valera@cocoroco.com</td>

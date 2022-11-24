@@ -1,17 +1,18 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\EmpleadoController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+Route::get('/clientes', [CustomerController::class, 'index'])
+->middleware(['auth', 'verified'])->name('clientes');
+
+Route::get('/empleados', [EmpleadoController::class, 'index'])
+->middleware(['auth', 'verified'])->name('empleados');
+
+
+
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -20,14 +21,6 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
-
-Route::get('/clientes', function () {
-    return view('clientes');
-})->middleware(['auth', 'verified'])->name('clientes');
-
-Route::get('/empleados', function () {
-    return view('empleados');
-})->middleware(['auth', 'verified'])->name('empleados');
 
 Route::get('/ventas', function () {
     return view('ventas');
