@@ -3,7 +3,7 @@
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Clientes') }}
         </h2>
-        <a href="#" class="btn btn-primary registrar">Registrar cliente</a>
+        <a href="{{ route('clientes.registrar') }}" class="btn btn-primary registrar">Registrar cliente</a>
     </x-slot>
 
     <div class="py-12">
